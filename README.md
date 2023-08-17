@@ -1,24 +1,23 @@
-# lng-lat-line
+# mini-map
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 如何使用LngLatLine（经纬度线）
 
-### Lints and fixes files
-```
-npm run lint
-```
+```js
+import LngLatLine from '../utils/lng-lat-line.js' // 引入LngLatLine对象
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+this.miniMap = new LngLatLine(this.map)
+this.miniMap.addLineToMap() // 添加经纬度线到地图上
+
+this.miniMap.removeLineToMap() //移除
+this.miniMap = undefined
+```
